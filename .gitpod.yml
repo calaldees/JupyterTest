@@ -3,7 +3,7 @@ tasks:
   # https://www.gitpod.io/docs/config-start-tasks#wait-for-commands-to-complete
   - name: dotnet
     # "Be able to set PATH environment variable for all shell (terminal) windows in VSCode from .gitpod.yml #9275" - https://github.com/gitpod-io/gitpod/issues/9275#issuecomment-1098275529
-    before: printf 'export PATH="%s:$PATH"\n' "/homse/gitpod/.dotnet/tools" >> $HOME/.bashrc && exit
+    before: printf 'export PATH="%s:$PATH"\n' "/home/gitpod/.dotnet/tools" >> $HOME/.bashrc && exit
     init: |
       wget https://packages.microsoft.com/config/ubuntu/20.04/packages-microsoft-prod.deb -O packages-microsoft-prod.deb
       sudo dpkg -i packages-microsoft-prod.deb
