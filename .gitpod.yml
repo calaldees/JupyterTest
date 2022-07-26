@@ -1,9 +1,11 @@
 tasks:
-  # https://docs.microsoft.com/en-us/dotnet/core/install/linux-ubuntu#2004
-  # https://www.gitpod.io/docs/config-start-tasks#wait-for-commands-to-complete
+  
   - name: dotnet
+    # https://docs.microsoft.com/en-us/dotnet/core/install/linux-ubuntu#2004
+    # https://www.gitpod.io/docs/config-start-tasks#wait-for-commands-to-complete
     # "Be able to set PATH environment variable for all shell (terminal) windows in VSCode from .gitpod.yml #9275" - https://github.com/gitpod-io/gitpod/issues/9275#issuecomment-1098275529
-    before: printf 'export PATH="%s:$PATH"\n' "/home/gitpod/.dotnet/tools" >> $HOME/.bashrc && exit
+    # "Ensure global tools dir is on the PATH #520" - https://github.com/dotnet/dotnet-docker/issues/520
+    before: printf 'export PATH="$PATH:%s"\n' "/home/gitpod/.dotnet/tools" >> $HOME/.bashrc   # && exit
     init: |
       wget https://packages.microsoft.com/config/ubuntu/20.04/packages-microsoft-prod.deb -O packages-microsoft-prod.deb
       sudo dpkg -i packages-microsoft-prod.deb
@@ -12,11 +14,8 @@ tasks:
       sudo apt-get install -y apt-transport-https
       sudo apt-get update
       sudo apt-get install -y dotnet-sdk-6.0
-
       dotnet tool install --global Microsoft.dotnet-interactive
-      
       dotnet interactive jupyter install
-
       gp sync-done dotnet
     #command: 
   #- name: dotnet-interactive
