@@ -14,13 +14,5 @@ vscode:
     - ms-dotnettools.vscode-dotnet-runtime
     - muhammad-sammy.csharp
     # Extensions below are not in OpenVSX repository (can they still be used here?)
-    - ms-dotnettools.csharp
-    - ms-dotnettools.dotnet-interactive-vscode
-
-tasks:
-  - name: terminal
-    command: bash
-    openMode: split-right
-  - name: code
-    command: open fizzbuzz.ipynb
-    openMode: split-left
+    #- ms-dotnettools.csharp
+    #- ms-dotnettools.dotnet-interactive-vscode
