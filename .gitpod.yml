@@ -4,7 +4,7 @@ image:
 ports:
   - port: 9000-9100
     onOpen: ignore
-  - port: 1024
+  - port: 1024-1064
     onOpen: ignore
 
 vscode:
@@ -13,8 +13,14 @@ vscode:
     - ms-toolsai.jupyter-renderers
     - ms-dotnettools.vscode-dotnet-runtime
     - muhammad-sammy.csharp
-    #- ms-dotnettools.csharp
-    #- ms-dotnettools.dotnet-interactive-vscode
+    # Extensions below are not in OpenVSX repository (can they still be used here?)
+    - ms-dotnettools.csharp
+    - ms-dotnettools.dotnet-interactive-vscode
 
-
-
+tasks:
+  - name: terminal
+    command: bash
+    openMode: split-right
+  - name:
+    command: open fizzbuzz.ipynb    
+    openMode: split-left
