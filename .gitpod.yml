@@ -21,6 +21,6 @@ tasks:
   - name: terminal
     command: bash
     openMode: split-right
-  - name:
-    command: open fizzbuzz.ipynb    
+  - name: code
+    command: open fizzbuzz.ipynb
     openMode: split-left
