@@ -10,11 +10,24 @@ tasks:
       sudo apt-get install -y apt-transport-https
       sudo apt-get update
       sudo apt-get install -y dotnet-sdk-6.0
+
+      dotnet tool install --global Microsoft.dotnet-interactive
+      PATH=$PATH:~/.dotnet/tools
+      dotnet interactive jupyter install
+
       gp sync-done dotnet
     #command: 
+  #- name: dotnet-interactive
+  #  init: |
+  #    gp sync-await dotnet
+  #    dotnet tool install --global Microsoft.dotnet-interactive
+  #    dotnet interactive jupyter install
 
 
 vscode:
   extensions:
     - ms-toolsai.jupyter
     - muhammad-sammy.csharp
+    #- ms-dotnettools.csharp
+    #- ms-dotnettools.dotnet-interactive-vscode
+
