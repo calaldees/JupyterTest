@@ -1,3 +1,10 @@
+ports:
+  - port: 9000-9100
+    onOpen: ignore
+  - port: 1024
+    onOpen: ignore
+
+
 tasks:
   
   - name: dotnet
