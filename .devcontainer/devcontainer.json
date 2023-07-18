@@ -1,0 +1,60 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/dotnet
+{
+	"name": "C# (.NET)",
+	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
+	"image": "mcr.microsoft.com/devcontainers/dotnet:0-7.0",
+	"features": {
+		"ghcr.io/devcontainers/features/dotnet:1": {
+			"installUsingApt": true,
+			"version": "latest"
+		}
+	},
+
+	// Features to add to the dev container. More info: https://containers.dev/features.
+	// "features": {},
+
+	// Use 'forwardPorts' to make a list of ports inside the container available locally.
+	"forwardPorts": [5000, 5001],
+	"portsAttributes": {
+		"5001": {
+			"protocol": "https"
+		}
+	},
+
+	// Use 'postCreateCommand' to run commands after the container is created.
+	"postCreateCommand": {
+		"dotnet restore": "dotnet restore",
+		"dotnet interactive": "dotnet tool install --global Microsoft.dotnet-interactive",
+		"dotnet jupyter": "dotnet interactive jupyter install"
+	},
+
+	// Configure tool-specific properties.
+	"customizations": {  // Configure properties specific to VS Code.
+		"vscode": {
+			// Add the IDs of extensions you want installed when the container is created.
+			"extensions": [
+				"streetsidesoftware.code-spell-checker",
+				//"ms-dotnettools.vscode-dotnet-pack"
+				//"ms-toolsai.jupyter-renderers",
+
+				// https://github.com/AmbachtIT/jupyter-csharp/blob/8f053bda06c49d901785a7678807a5e1d32e6177/.devcontainer/devcontainer.json#L15
+				"ms-toolsai.jupyter",
+				"ms-python.python",
+				"ms-dotnettools.csharp",
+				"ms-dotnettools.dotnet-interactive-vscode",
+				"ms-vscode-remote.remote-containers"
+
+				// gitpod.yml
+				//- ms-toolsai.jupyter
+				//- ms-toolsai.jupyter-renderers
+				//- ms-dotnettools.vscode-dotnet-runtime
+				//- muhammad-sammy.csharp
+			
+			]
+		}
+	}
+
+	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
+	// "remoteUser": "root"
+}
