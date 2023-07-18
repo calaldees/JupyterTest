@@ -26,12 +26,12 @@
 	// Use 'postCreateCommand' to run commands after the container is created.
 	// ?? I don't know if these even run? Where can I see the logs?
 	"postCreateCommand": {
-		"dotnet restore": "dotnet restore",
+		//"dotnet restore": "dotnet restore",
 		"dotnet interactive": "dotnet tool install --global Microsoft.dotnet-interactive",
 		"dotnet jupyter": "dotnet interactive jupyter install"
 	},
 	
-	"postAttachCommand ": {
+	"postAttachCommand": {
 		"open default": "code fizzbuzz.ipynb"
 	},
 
