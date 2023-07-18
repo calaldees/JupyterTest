@@ -30,6 +30,10 @@
 		"dotnet interactive": "dotnet tool install --global Microsoft.dotnet-interactive",
 		"dotnet jupyter": "dotnet interactive jupyter install"
 	},
+	
+	"postAttachCommand ": {
+		"open default": "code fizzbuzz.ipynb"
+	},
 
 	// Configure tool-specific properties.
 	"customizations": {  // Configure properties specific to VS Code.
