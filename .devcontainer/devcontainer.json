@@ -23,6 +23,7 @@
 	},
 
 	// Use 'postCreateCommand' to run commands after the container is created.
+	// ?? I don't know if these even run? Where can I see the logs?
 	"postCreateCommand": {
 		"dotnet restore": "dotnet restore",
 		"dotnet interactive": "dotnet tool install --global Microsoft.dotnet-interactive",
@@ -35,22 +36,10 @@
 			// Add the IDs of extensions you want installed when the container is created.
 			"extensions": [
 				"streetsidesoftware.code-spell-checker",
-				//"ms-dotnettools.vscode-dotnet-pack"
-				//"ms-toolsai.jupyter-renderers",
-
 				// https://github.com/AmbachtIT/jupyter-csharp/blob/8f053bda06c49d901785a7678807a5e1d32e6177/.devcontainer/devcontainer.json#L15
 				"ms-toolsai.jupyter",
-				"ms-python.python",
 				"ms-dotnettools.csharp",
-				"ms-dotnettools.dotnet-interactive-vscode",
-				"ms-vscode-remote.remote-containers"
-
-				// gitpod.yml
-				//- ms-toolsai.jupyter
-				//- ms-toolsai.jupyter-renderers
-				//- ms-dotnettools.vscode-dotnet-runtime
-				//- muhammad-sammy.csharp
-			
+				"ms-dotnettools.dotnet-interactive-vscode"
 			]
 		}
 	}
