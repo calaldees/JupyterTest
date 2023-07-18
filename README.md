@@ -1,7 +1,11 @@
-# GitpodJupyterTest
-Experiment to use c# jupyter notebooks in gitpod
+# JupyterTest
+Experiment to use c# jupyter notebooks in gitpod/codespaces
 
-https://gitpod.io#https://github.com/calaldees/GitpodJupyterTest
+* GitPod
+    * (currently won't build)
+    * https://gitpod.io#https://github.com/calaldees/JupyterTest
+* CodeSpaces
+    * https://codespaces.new/calaldees/JupyterTest
 
 
 ## Local Windows
