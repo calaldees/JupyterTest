@@ -6,7 +6,6 @@ Experiment to use c# jupyter notebooks in gitpod/codespaces
     * https://gitpod.io#https://github.com/calaldees/JupyterTest
 * CodeSpaces
     * https://codespaces.new/calaldees/JupyterTest
-    * [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](URL)
 
 
 ## Local Windows
