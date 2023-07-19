@@ -25,18 +25,17 @@
 
 	// Use 'postCreateCommand' to run commands after the container is created.
 	// ?? I don't know if these even run? Where can I see the logs?
-	"postCreateCommand": {
-		//"dotnet restore": "dotnet restore",
-		"dotnet interactive": "dotnet tool install --global Microsoft.dotnet-interactive",
-		"dotnet jupyter": "dotnet interactive jupyter install"
-	},
+	//"postCreateCommand": "dotnet tool install --global Microsoft.dotnet-interactive && dotnet interactive jupyter install",
+		//"dotnet restore"
 	
-	"postAttachCommand": {
-		"open default": "code fizzbuzz.ipynb"
-	},
-
 	// Configure tool-specific properties.
 	"customizations": {  // Configure properties specific to VS Code.
+		"codespaces": {
+			"openFiles": [
+				"README.md",
+				"fizzbuzz.ipynb"
+			]
+		},
 		"vscode": {
 			// Add the IDs of extensions you want installed when the container is created.
 			"extensions": [
