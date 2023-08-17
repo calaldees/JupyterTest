@@ -29,13 +29,13 @@
 		//"dotnet restore"
 	
 	// Configure tool-specific properties.
-	"customizations": {  // Configure properties specific to VS Code.
+	"customizations": {
 		"codespaces": {
 			"openFiles": [
 				"fizzbuzz.ipynb"
 			]
 		},
-		"vscode": {
+		"vscode": {  // Configure properties specific to VS Code.
 			// Add the IDs of extensions you want installed when the container is created.
 			"extensions": [
 				"streetsidesoftware.code-spell-checker",
